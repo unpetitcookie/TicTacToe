@@ -76,8 +76,12 @@ func getPlayerInput() int {
 		clearScreen()
 		if position < 1 || position > 9 {
 			fmt.Println("Position invalide. Veuillez réessayer.")
+			printBoard()
+
 		} else if board[position-1] != strconv.Itoa(position) {
 			fmt.Println("Position déjà prise. Veuillez réessayer.")
+			printBoard()
+
 		} else {
 			break
 		}
